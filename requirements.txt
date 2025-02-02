@@ -7,3 +7,5 @@ torchtext==0.17.0
 spacy
 flask
 numpy==1.21.2
+datasets
+scikit-learn
