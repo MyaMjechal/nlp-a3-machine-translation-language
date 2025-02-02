@@ -78,7 +78,7 @@ class MultiHeadAttentionLayer(nn.Module):
         self.fc_k     = nn.Linear(hid_dim, hid_dim)
         self.fc_v     = nn.Linear(hid_dim, hid_dim)
 
-         # Linear layers for additive attention
+        # Linear layers for additive attention
         self.W1 = nn.Linear(self.head_dim, self.head_dim)  # W1 for Q
         self.W2 = nn.Linear(self.head_dim, self.head_dim)  # W2 for K
         self.vt = nn.Linear(self.head_dim, 1)  # v^T for additive attention
@@ -309,14 +309,16 @@ def sequential_transforms(*transforms):
         return txt_input
     return func
 
+
 # function to add BOS/EOS and create tensor for input sequence indices
 def tensor_transform(token_ids):
     return torch.cat((torch.tensor([SOS_IDX]),
                       torch.tensor(token_ids),
                       torch.tensor([EOS_IDX])))
 
+
 # src and trg language text transforms to convert raw strings into tensors indices
-def text_transform(token_transform, vocab_transform):
+def fetch_text_transform(token_transform, vocab_transform):
     text_transform = {}
     for ln in [SRC_LANGUAGE, TRG_LANGUAGE]:
         text_transform[ln] = sequential_transforms(token_transform[ln], #Tokenization
