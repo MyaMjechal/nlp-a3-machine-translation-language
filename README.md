@@ -218,12 +218,12 @@ _GIF 1: Demonstration of the English to Burmese translation web application in a
 **Web App Interface:**  
 ![MTT_1](images/mtt_1.png)
 
-_Figure 1: Initial page of English to Burmese Translator website_
+_Figure 7: Initial page of English to Burmese Translator website_
 
 **Translation Example:**  
 ![MTT_2](images/mtt_2.png)
 
-_Figure 2: Result of Machine Translation to Burmese with English text ''_
+_Figure 8: Result of Machine Translation to Burmese with English sentence 'If everything is possible and nothing is truly impossible, then every idea must have a reason to exist otherwise, why would we even consider them?'_
 
 
 ## References  

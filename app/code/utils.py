@@ -35,7 +35,7 @@ class EncoderLayer(nn.Module):
 
 
 class Encoder(nn.Module):
-    def __init__(self, input_dim, hid_dim, n_layers, n_heads, pf_dim, dropout, device, max_length = 700):
+    def __init__(self, input_dim, hid_dim, n_layers, n_heads, pf_dim, dropout, device, max_length = 500):
         super().__init__()
         self.device = device
         self.tok_embedding = nn.Embedding(input_dim, hid_dim)
@@ -195,7 +195,7 @@ class DecoderLayer(nn.Module):
 
 class Decoder(nn.Module):
     def __init__(self, output_dim, hid_dim, n_layers, n_heads,
-                 pf_dim, dropout, device,max_length = 700):
+                 pf_dim, dropout, device,max_length = 500):
         super().__init__()
         self.device = device
         self.tok_embedding = nn.Embedding(output_dim, hid_dim)

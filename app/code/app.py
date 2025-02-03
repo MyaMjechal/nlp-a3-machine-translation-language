@@ -20,9 +20,9 @@ TRG_LANGUAGE = 'my'
 token_transform = mtt_additive_data['token_transform']
 vocab_transform = mtt_additive_data['vocab_transform']
 text_transform = fetch_text_transform(token_transform, vocab_transform)
-print("token_transform ", token_transform)
-print("vocab_transform ", vocab_transform)
-print('text_transform ', text_transform)
+# print("token_transform ", token_transform)
+# print("vocab_transform ", vocab_transform)
+# print('text_transform ', text_transform)
 
 INPUT_DIM = len(vocab_transform[SRC_LANGUAGE])
 OUTPUT_DIM = len(vocab_transform[TRG_LANGUAGE])
